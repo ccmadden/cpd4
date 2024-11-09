@@ -259,10 +259,13 @@
     .search{
       display: flex; 
       justify-content: center;
+      border: none;
+
     }
   
     nav a {
       padding: 15px 30px; /* Adjust padding for desktop */
+      border: none;
     }
   
     #gallery {
