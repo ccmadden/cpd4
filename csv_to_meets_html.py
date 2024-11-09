@@ -33,25 +33,29 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="stylesheet" href="../dist/css/lb.css">
 <link rel="stylesheet" href="../css/style.css">
 </head>
+
    <body>
-   <a href = "#main">Skip to Main Content</a>
+     <div class="search">
+   <a href = ".search">Skip to Main Content</a>
    <nav>
      <ul>
-     <div class="search">
+   
         <li><a href="index.html">Home Page</a></li>
         <li><a href="#summary">Summary</a></li>
         <li><a href="#team-results">Team Results</a></li>
         <li><a href="#individual-results">Individual Results</a></li>
         <li><a href="#gallery">Gallery</a></li>
+    
      </ul>
    </nav>
-      <div>
+    </div>
    <header>
       <!--Meet Info-->
        
         <h1><a href="{link_url}">{link_text}</a></h1>
         <h2>{h2_text}</h2>
 </header>
+
    <main id = "main">
 
 

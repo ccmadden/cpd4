@@ -52,9 +52,10 @@
       color: black;
       padding: 15px;
       display: block;
-      border-bottom: 1px solid #333;
+      border-bottom: 2px solid #333;
+
     }
-    
+  
     nav a:hover, nav a:focus {
     text-decoration: underline;
     background-color: #036;
@@ -248,7 +249,6 @@
     /* Responsive Design for Tablets and Desktops */
   @media (min-width: 768px) {
     body {
-      
       font-size: 1.2em;
     }
   
@@ -256,12 +256,13 @@
       margin: 0px;
       text-align: center;
     }
+    
 
     .search{
       width: 100%;
       display: flex; 
       justify-content: center;
-      border: none;
+      border-bottom: transparent;
 
     }
   
