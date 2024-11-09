@@ -248,15 +248,17 @@
     /* Responsive Design for Tablets and Desktops */
   @media (min-width: 768px) {
     body {
-      padding: 20px; /* Add padding  for larger screens */
+      
       font-size: 1.2em;
     }
   
     nav ul {
+      margin: 0px;
       text-align: center;
     }
 
     .search{
+      width: 100%;
       display: flex; 
       justify-content: center;
       border: none;
@@ -264,7 +266,6 @@
     }
   
     nav a {
-      padding: 15px 30px; /* Adjust padding for desktop */
       border: none;
     }
   
@@ -282,7 +283,6 @@
   /* Further scaling for desktop view */
   @media (min-width: 1024px) {
     main {
-      padding: 40px; /* More padding for desktop */
       max-width: 1200px; /* Constrain max width for readability */
       margin: auto;
     }
