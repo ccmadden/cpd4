@@ -1,0 +1,346 @@
+/*Here is where I am styling my Icons*/
+
+/*
+  QUESTIONS FOR CLASS:
+  1. Trouble linking the js file (example with the lightbox
+  2. How much Java are we really meant to be having in this
+  3. I have no suggestions on my CPD3 so does that mean I dont need to change anything for that
+  4. Look over the change in screen size
+
+
+
+  to do::
+  - bigger font for tablet and desktop
+  - navigation bar should change 
+  
+  
+  
+  FOCUS:
+  - navigation (mobile to computer)
+  - struturally */
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  
+  /*Here is where I am sty;ing the body of my webpage, I choise colors and font that have a high contrast to pass accessibility tests*/
+  body {
+      font-family: 'Times New Roman', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+  
+    /*This is my styling for the navigation bar, I chose to again have high contrast in the background color and font for accessibiltiy*/
+     nav ul {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 10px;
+      background-color: lightgray;
+      color: black;
+     
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: black;
+      padding: 15px;
+      display: block;
+      border-bottom: 1px solid #333;
+    }
+    
+    nav a:hover, nav a:focus {
+    text-decoration: underline;
+    background-color: #036;
+    color: white;
+    }
+    
+    h1, h2 {
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    /* Header Styling */
+     header {
+    position: sticky; /* Makes the header sticky */
+    top: 0; 
+    z-index: 1000; 
+    background-color: #036; 
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    header h1 a {
+      color: #fff;
+     text-decoration: none;
+      font-size: 20px; 
+    }
+  
+    header h2{
+      font-size: 15px;
+    }
+    
+    header a:hover, header a:focus {
+      text-decoration: underline;
+    }
+    
+    /* Main Content */
+   main {
+      padding: 20px;
+      margin-bottom: 20px;
+  
+    }
+    p {
+      text-align: center;
+    }
+
+   
+  #team-results table{
+    display: inline-table;
+  
+  }
+    
+    #gallery{
+      display: grid;
+      grid-template-columns: 45% 45%;
+      justify-content: space-around;
+      padding: 20px;
+    
+    }
+    #gallery img{
+      padding: 5px;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+  
+    #gallery h2{
+      grid-column: 1 / -1;
+      margin: 15px;
+    
+    }
+  
+    /* Athlete Section*/
+  .athlete {
+    margin: 1em 0;
+    display: inline-block;
+    align-items: center;
+  
+  }
+  /*Stylng of the images to be circular, have a box-shadow, and take up the width of the screen*/
+  .athlete img {
+    border-radius: 100px;
+    object-fit: cover;
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 22px;
+    margin-right: 28px;
+  }
+  
+  .athlete dl {
+    text-align: center;
+    margin: 0;
+  }
+  .athlete figure, .athlete dt {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+  }
+  
+  .athlete figcaption{
+    font-size: 1.1em;
+    color: #036;
+    text-align: center;;
+  }
+  
+  .athlete{
+    margin: 0;
+  }
+  
+  .athlete img:hover, .athlete img:focus {
+    transform: scale(1.05); 
+    cursor: pointer;
+  }  
+    /* Team Results Table */
+     table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+    
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    /*Changing the bakchround color of every other section for greater distingushability */
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    @media (width) {
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .athlete img {
+      animation: fadeIn 1s ease-in-out;
+    }
+    .material-symbols-outlined {
+      animation: fadeIn 1s ease-in-out;
+      
+    }
+  
+    
+    /* Media/ Mobile View/ Accessibility */
+  /*Prefered reduced motion*/
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none;
+      }
+    } 
+    /*Prefered Dark Mode, changed various aspects to make page look better and accessible*/
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1e1e1e;
+        color: #f4f4f4;
+      }
+      a{
+        color: white;
+      }
+  
+      nav ul {
+        color: white;
+      }
+    .athlete{
+      color:white;
+    }
+    
+      table {
+        border-color: #444;
+      }
+  
+      .athlete dt, .athlete figure{
+        color: lightgray;
+      }
+    
+      tr:nth-child(even) {
+        background-color: #2e2e2e;
+      }
+    } 
+     
+    /* Responsive Design for Tablets and Desktops */
+  @media (min-width: 768px) {
+    body {
+      padding: 20px; /* Add padding  for larger screens */
+      font-size: 1.2em;
+    }
+  
+    nav ul {
+      text-align: center;
+    }
+
+    .search{
+      display: flex; 
+      justify-content: center;
+    }
+  
+    nav a {
+      padding: 15px 30px; /* Adjust padding for desktop */
+    }
+  
+    #gallery {
+      grid-template-columns: repeat(4, 1fr); /* More columns on larger screens */
+      padding: 40px; /* Increase padding for more space */
+    }
+  
+    .athlete img {
+      width: 150px; /* Adjust image sizes */
+      height: 200px;
+    }
+  }
+  
+  /* Further scaling for desktop view */
+  @media (min-width: 1024px) {
+    main {
+      padding: 40px; /* More padding for desktop */
+      max-width: 1200px; /* Constrain max width for readability */
+      margin: auto;
+    }
+  
+    #gallery {
+      grid-template-columns: repeat(5, 1fr); /* Add more columns */
+    }
+    h1{
+      font-size: 1.1em;
+    }
+    h2{
+      font-size: 1.1em;
+
+    }
+    .athlete img{
+      border-radius: 200px;
+      width: 225px;
+      height: 275px;
+    }
+  
+    table {
+      font-size: 1.1em; /* Increase table text size */
+    }
+  
+    footer {
+      padding: 20px; /* More padding for footer */
+      font-size: 1.1em;
+    }
+  }
+  
+    /* Footer Styling */
+     footer {
+      background-color: #036;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+    
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+   /* Gallery container */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts columns based on screen width */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Gallery images */
+#gallery img {
+  width: 100%; /* Makes images take up full width of grid cell */
+  height: auto;
+  padding: 5px;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
