@@ -265,10 +265,6 @@
 
     }
   
-    nav a {
-      border: none;
-    }
-  
     #gallery {
       grid-template-columns: repeat(4, 1fr); /* More columns on larger screens */
       padding: 40px; /* Increase padding for more space */
