@@ -52,9 +52,9 @@
       color: black;
       padding: 15px;
       display: block;
-      border-bottom: 2px solid #333;
-
+      border-bottom: 2px solid white;
     }
+  
   
     nav a:hover, nav a:focus {
     text-decoration: underline;
@@ -250,6 +250,7 @@
   @media (min-width: 768px) {
     body {
       font-size: 1.2em;
+      border-bottom: 0px;
     }
   
     nav ul {
