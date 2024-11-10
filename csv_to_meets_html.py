@@ -33,29 +33,25 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="stylesheet" href="../dist/css/lb.css">
 <link rel="stylesheet" href="../css/style.css">
 </head>
-
    <body>
-     <div class="search">
-   <a href = ".search">Skip to Main Content</a>
+   <a href = "#main">Skip to Main Content</a>
    <nav>
      <ul>
-   
+     <div class="search">
         <li><a href="index.html">Home Page</a></li>
         <li><a href="#summary">Summary</a></li>
         <li><a href="#team-results">Team Results</a></li>
         <li><a href="#individual-results">Individual Results</a></li>
         <li><a href="#gallery">Gallery</a></li>
-    
+        <div>
      </ul>
    </nav>
-    </div>
    <header>
       <!--Meet Info-->
        
         <h1><a href="{link_url}">{link_text}</a></h1>
         <h2>{h2_text}</h2>
 </header>
-
    <main id = "main">
 
 
@@ -204,13 +200,13 @@ def select_random_photos(folder_path, num_photos=5):  # Set default to 5 photos
     # Select 5 random images
     return random.sample(image_files, num_photos)
 
-# Step 3: Generate HTML image tags with Lightbox functionality
+# Step 3: Generate HTML image tags
 def generate_image_tags(image_files, folder_path):
     img_tags = []
     for img in image_files:
         img_path = os.path.join(folder_path, img)
-        # Wrap each image in a Lightbox-enabled anchor tag
-        img_tags.append(f'<a href="../{img_path}" data-lightbox="gallery"><img src="../{img_path}" width="200" alt=""></a>')
+        # print(f"The image_path is {img_path}")
+        img_tags.append(f'<img src=../{img_path} width = "200" alt="">')
     return "\n".join(img_tags)
 
 # Putting it all together
