@@ -211,9 +211,14 @@
     /* Media/ Mobile View/ Accessibility */
   /*Prefered reduced motion*/
     @media (prefers-reduced-motion: reduce) {
-      * {
+      .athlete img {
         animation: none;
       }
+      .material-symbols-outlined {
+        animation: none;
+        
+      }
+      
     } 
     /*Prefered Dark Mode, changed various aspects to make page look better and accessible*/
     @media (prefers-color-scheme: dark) {
@@ -230,6 +235,9 @@
       }
     .athlete{
       color:white;
+    }
+    .athlete figcaption{
+      color: white;
     }
     
       table {
@@ -257,7 +265,7 @@
       text-align: center;
     }
 
-    .search{
+    .search ul{
       width: 100%;
       display: flex; 
       justify-content: center;

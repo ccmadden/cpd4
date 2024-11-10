@@ -35,17 +35,18 @@ def csv_to_html(csv_filename, output_folder):
 </head>
    <body>
    <a href = "#main">Skip to Main Content</a>
+      <div class="search">
    <nav>
      <ul>
-     <div class="search">
         <li><a href="index.html">Home Page</a></li>
         <li><a href="#summary">Summary</a></li>
         <li><a href="#team-results">Team Results</a></li>
         <li><a href="#individual-results">Individual Results</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <div>
      </ul>
+         
    </nav>
+    <div>
    <header>
       <!--Meet Info-->
        
@@ -206,7 +207,7 @@ def generate_image_tags(image_files, folder_path):
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<img src=../{img_path} width = "200" alt="">')
+        img_tags.append(f'<img src=../{img_path} width = "200" alt="Gallery Image">')
     return "\n".join(img_tags)
 
 # Putting it all together
